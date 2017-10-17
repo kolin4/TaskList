@@ -23,10 +23,7 @@ window.onload = () =>{
 
 function addItems(){
     let list = tabList.map( (elem,i) =>{
-        return `<li data-id=${i}>${elem}
-        <button class='del'>Usun</button>
-        </li>
-
+        return `<li  class='item'  data-id=${i}>${elem} </li>
         `
     })
 
@@ -35,11 +32,11 @@ function addItems(){
 }
 window.addEventListener('click', function(e){
     let item = e.target;
-    if ( item.classList  == 'del'){
-        let idToDel = item.parentElement.dataset.id;
+    if ( item.classList  == 'item'){
+        let idToDel = item.dataset.id;
 
         tabList.splice(idToDel, 1);
-        item.parentElement.remove();
+        item.remove();
         addItems();
         console.log(tabList);
     }

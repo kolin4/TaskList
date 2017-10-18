@@ -43,17 +43,29 @@ window.addEventListener('click', function(e){
         tabList.splice(idToDel, 1);
         item.remove();
         addItems();
+    } else if ( item.classList == 'yourList') {
+        console.log('wcisnales liste');
+        console.log(item.innerText);
+        tabList = JSON.parse(localStorage.getItem(item.innerText));
+        addItems();
     }
 
 })
 
 btnSave.addEventListener('click', function(e){
-
-    function list(name,list){
-        this.name = name,
-        this.list = [list]
+    if ( inputNameList.value == ""){
+        localStorage.setItem('no-name', JSON.stringify(tabList));
+        addElementList('no-name');
+    } else {
+        localStorage.setItem(inputNameList.value, JSON.stringify(tabList));
+        addElementList(inputNameList.value);
     }
-    let listObj = new list(inputNameList.value, tabList);
-    localStorage.setItem(inputNameList.value, tabList);
+
     inputNameList.value = "";
 })
+
+
+function addElementList(name){
+    let result = document.querySelector('#result');
+    return result.innerHTML = `<li class='yourList' data-name=${name}>${name}</li>`
+}

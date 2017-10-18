@@ -17,11 +17,28 @@
 
 .form{
 
-    width: 100%;
+    width: 50%;
     height: 50px;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.listResult{
+    width: 30%;
+    height: 100px;
     text-align: center;
     margin-top: 10px;
 
+}
+.text {
+
+    height: 40px;
+    border: 5px solid rgb(195, 191, 196);
+    background-color: white;
+    border-radius: 5px;
+    outline: none;
+    font-size: 30px;
+    color: grey;
 }
 .form input[type=text]{
     width: 300px;
@@ -59,4 +76,13 @@
 }
 #save {
     width: 150px;
+}
+
+.manageComp{
+    width: 100%;
+    text-align: center;
+}
+
+#result{
+    list-style-type: none;
 }

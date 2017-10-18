@@ -19,6 +19,7 @@ form.addEventListener('submit', function(e){
 
 // on refresh loading storage list
 window.onload = () =>{
+    console.log(tempList);
     for ( let i = 0; i < localStorage.length; i++){
             tempList.push(localStorage.key(i));
     }
@@ -34,11 +35,13 @@ function addItems(){
     listaUl.innerHTML = list.join("");
 
 }
-// functoin adding user lists
+// function adding user lists
 function addElementList(name){
     let result = document.querySelector('#result');
     let newTempList = tempList.map( (elem) =>{
-        return `<li class='yourList'>${elem}</li>`
+        return `<li data-name = ${elem} class='yourList'>${elem}
+        <button class='delList'>X</button>
+        </li>`
     })
     return result.innerHTML = newTempList.join("");
 }
@@ -54,10 +57,24 @@ window.addEventListener('click', function(e){
         item.remove();
         addItems();
     } else if ( item.classList == 'yourList') {
-        console.log('wcisnales liste');
-        console.log(item.innerText);
-        tabList = JSON.parse(localStorage.getItem(item.innerText));
+        let allListItems = document.querySelectorAll('.yourList'); // active class adding
+
+        for ( let i = 0; i < allListItems.length; i++){
+            allListItems[i].classList.remove('active');
+        }
+        item.classList.add('active');
+
+        tabList = JSON.parse(localStorage.getItem(item.dataset.name));
         addItems();
+    } else if ( item.classList == 'delList') {
+
+        // usun element z tempList
+        console.log(tempList);
+        let index = tempList.indexOf(item.parentElement.dataset.name);
+        tempList.splice(index,1);
+        console.log(tempList);
+        localStorage.removeItem(item.parentElement.dataset.name);
+        item.parentElement.remove();
     }
 
 })
@@ -73,6 +90,6 @@ btnSave.addEventListener('click', function(e){
         tempList.push(inputNameList.value);
         addElementList(inputNameList.value);
     }
-    console.log(tempList);
+
     inputNameList.value = "";
 })

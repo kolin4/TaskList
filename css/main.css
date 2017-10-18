@@ -86,3 +86,6 @@
 #result{
     list-style-type: none;
 }
+.active {
+    transform: scale(1.5);
+}

@@ -89,3 +89,7 @@
 .active {
     transform: scale(1.5);
 }
+.finish {
+    color: red;
+
+}

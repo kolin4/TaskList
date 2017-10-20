@@ -13,13 +13,21 @@ form.addEventListener('submit', function(e){
     this.reset();
     addItems(tabList);
     btnSave.disabled = false;
+    let activeList = document.querySelector('.active');
+    if ( activeList ){
+        console.log(activeList.dataset.name + " " + "dzialaaaa");
+        localStorage.setItem(activeList.dataset.name, JSON.stringify(tabList)); // nie dziala !!!!!!!
+    }
+
+    ///  sprawdz czy el usnitje i dodaj do niego elementy , rob uwuwanie
+
 
 
 })
 
 // on refresh loading storage list
 window.onload = () =>{
-    console.log(tempList);
+
     for ( let i = 0; i < localStorage.length; i++){
             tempList.push(localStorage.key(i));
     }
@@ -39,7 +47,7 @@ function addItems(elem){
 function addElementList(name){
     let result = document.querySelector('#result');
     result.innerHTML = "";
-    console.log(tempList);
+
     let newTempList = tempList.map( (elem) =>{
 
         let li = document.createElement('li');
@@ -68,9 +76,15 @@ function addElementList(name){
 window.addEventListener('click', function(e){
     let item = e.target;
     if ( item.classList  == 'item'){
-        console.log(tabList);
+
         let idToDel = item.dataset.id;
         tabList.splice(idToDel, 1);
+        // deleting item from list in localStorage
+        let activeList = document.querySelector('.active');
+        if ( activeList ){
+            localStorage.setItem(activeList.dataset.name, JSON.stringify(tabList));
+        }
+
         item.remove();
         addItems(tabList);
     } else if ( item.classList == 'yourList') {
@@ -79,22 +93,25 @@ window.addEventListener('click', function(e){
         for ( let i = 0; i < allListItems.length; i++){
             allListItems[i].classList.remove('active');
         }
-        item.classList.add('active');
-
-
+            item.classList.add('active');
         let dataset = item.dataset.name;
-        console.log(item.dataset.name);
+
         tabList = JSON.parse(localStorage.getItem(dataset))
         addItems(tabList);
+    } else if ( item.classList == 'yourList active' ){
+        item.classList.remove('active');
+        tabList = [];
+        listaUl.innerHTML = "";
+
     } else if ( item.classList == 'delList') {
 
         // usun element z tempList
-        console.log(tempList);
+
         listaUl.innerHTML = "";
         let index = tempList.indexOf(item.parentElement.dataset.name);
         tempList.splice(index,1);
         tabList = [];
-        console.log(tempList);
+
         localStorage.removeItem(item.parentElement.dataset.name);
         item.parentElement.remove();
     }
@@ -113,10 +130,10 @@ btnSave.addEventListener('click', function(e){
         alert('type a list name');
     } else {
         // check if the new list name already exist
-        console.log('else');
+
         if ( localStorage.length > 0 ){
             for ( let i = 0; i < localStorage.length; i++ ){
-                console.log('petla');
+
                 if ( localStorage.key(i) == inputNameList.value ){
                     return ( inputNameList.value = "",
                         alert('List type already exist!'))

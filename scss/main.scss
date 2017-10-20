@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid red;
+    align-content: flex-start;
+    background-color: rgb(245, 243, 110);
+}
+
+.boxTask {
+   width: 70%;
+   border: 1px solid black;
+
+   .form{
+      width: 50%;
+      height: 50px;
+      text-align: right;
+      margin-top: 10px;
+
+      input[type=text]{
+        width: 300px;
+        height: 40px;
+        border: 5px solid rgb(195, 191, 196);
+        background-color: white;
+        border-radius: 5px;
+        outline: none;
+        font-size: 30px;
+        color: grey;
+     }
+   }
+   .lista li {
+      width: 300px;
+      height: 40px;
+      border: 5px solid rgb(195, 191, 196);
+      background-color: white;
+      border-radius: 5px;
+      outline: none;
+      font-size: 25px;
+      color: grey;
+      list-style-type: none;
+      transition: 0.3s;
+
+      &:hover{
+         border: 5px solid rgb(120, 120, 120);
+         transform:scale(1.05);
+      }
+   }
+}
+
+/////////////////////////////////
+
+
+.boxList {
+   width: 30%;
+   border: 1px solid black;
+
+   .manageComp{
+      width: 100%;
+      text-align: center;
+
+      .listSaveComp{
+         width: 80%;
+         margin: 0 auto;
+
+         #listName {
+            width: 50%;
+         }
+         #save {
+            width: 150px;
+         }
+      }
+   }
+
+   .listResult{
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      margin-top: 10px;
+      .text {
+         width: 80%;
+         margin: 0 auto;
+         height: 40px;
+         border: 5px solid rgb(195, 191, 196);
+         background-color: white;
+         border-radius: 5px;
+         outline: none;
+         font-size: 30px;
+         color: grey;
+      }
+
+      #result{
+         list-style-type: none;
+      }
+
+   }
+
+}
+
+.active {
+   transform: scale(1.5);
+}

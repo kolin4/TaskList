@@ -19,10 +19,6 @@ form.addEventListener('submit', function(e){
         localStorage.setItem(activeList.dataset.name, JSON.stringify(tabList)); // nie dziala !!!!!!!
     }
 
-    ///  sprawdz czy el usnitje i dodaj do niego elementy , rob uwuwanie
-
-
-
 })
 
 // on refresh loading storage list

@@ -53,7 +53,7 @@ function addElementList(name){
 
         let btn = document.createElement('button');
         btn.classList.add('delList');
-        btn.innerText = 'DEL';
+        btn.innerText = 'X';
         li.appendChild(btn);
 
 

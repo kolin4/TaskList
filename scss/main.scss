@@ -4,29 +4,40 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
+    cursor: default;
 }
 
 .box {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    border: 1px solid red;
     align-content: flex-start;
-    background-color: rgb(245, 243, 110);
+    background-color: #D499B9;
 }
 
 .boxTask {
    width: 70%;
-   border: 1px solid black;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   border: 15px solid rgb(120, 120, 120);
+   background-color: #FFEEE4;
+   border-radius: 40px;
+   margin:10px;
+
+
 
    .form{
-      width: 50%;
+      width: 100%;
       height: 50px;
-      text-align: right;
-      margin-top: 10px;
+      text-align: center;
+      border-bottom: 3px solid rgb(120, 120, 120);
 
       input[type=text]{
+        margin-top: 3px;
         width: 300px;
         height: 40px;
         border: 5px solid rgb(195, 191, 196);
@@ -35,23 +46,56 @@
         outline: none;
         font-size: 30px;
         color: grey;
+        cursor:text;
+        text-align: center;
+        transition: 0.5s;
+        &:focus{
+            border: 5px solid red;
+        }
      }
    }
-   .lista li {
-      width: 300px;
+   .text {
+      width: 40%;
+      margin:  20px auto 10px auto;
+      padding: 5px;
       height: 40px;
-      border: 5px solid rgb(195, 191, 196);
+      border: 5px solid rgb(120, 120, 120);
       background-color: white;
       border-radius: 5px;
       outline: none;
-      font-size: 25px;
+      font-size: 20px;
       color: grey;
-      list-style-type: none;
-      transition: 0.3s;
 
-      &:hover{
-         border: 5px solid rgb(120, 120, 120);
-         transform:scale(1.05);
+
+
+   }
+   .lista {
+       margin-top: 60px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+
+
+         li {
+          width: 300px;
+          text-align: left;
+          height: 40px;
+          border: 5px solid rgb(195, 191, 196);
+          background-color: white;
+          border-radius: 5px;
+          outline: none;
+          font-size: 25px;
+          color: grey;
+          list-style-type: none;
+          transition: 0.3s;
+
+          &:hover{
+             border: 5px solid rgb(120, 120, 120);
+             transform:scale(1.05);
+          }
       }
    }
 }
@@ -61,10 +105,14 @@
 
 .boxList {
    width: 30%;
-   border: 1px solid black;
+   border: 15px solid rgb(120, 120, 120);
+   background-color: #FFEEE4;
+   border-radius: 40px;
+   margin:10px;
 
    .manageComp{
       width: 100%;
+      border-bottom: 3px solid rgb(120, 120, 120);
 
       .listSaveComp{
          width: 80%;
@@ -80,13 +128,14 @@
             font-size: 15px;
             color: black;
             transition: 0.8s;
+            cursor:text;
             &:focus{
 
                 border: 3px solid rgb(120, 120, 120);
             }
          }
          #save {
-            width: 150px;
+            width: 130px;
             height: 25px;
             background-color: rgb(195, 191, 196);
             border-radius: 5px;
@@ -117,6 +166,7 @@
          outline: none;
          font-size: 20px;
          color: grey;
+
       }
 
       #result{
@@ -147,7 +197,7 @@
             width: 75%;
             border: 5px solid rgb(120, 120, 120);
             color: black;
-            font-weight: bold;
+
          }
          .delList {
              background-color: red;
@@ -158,6 +208,10 @@
              display: flex;
              justify-content: center;
              align-items: center;
+             transition: 1s;
+             &:hover{
+                 transform: rotate(180deg);
+             }
          }
       }
 

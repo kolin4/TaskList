@@ -15,7 +15,6 @@ form.addEventListener('submit', function(e){
     btnSave.disabled = false;
     let activeList = document.querySelector('.active');
     if ( activeList ){
-        console.log(activeList.dataset.name + " " + "dzialaaaa");
         localStorage.setItem(activeList.dataset.name, JSON.stringify(tabList)); // nie dziala !!!!!!!
     }
 
@@ -33,7 +32,7 @@ window.onload = () =>{
 // Add items to ul list
 function addItems(elem){
     let list = elem.map( (elem,i) =>{
-        return `<li class='item' data-id=${i}>${elem} </li>
+        return `<li class='item' data-id=${i}>${elem}</li>
         `
     })
     listaUl.innerHTML = list.join("");

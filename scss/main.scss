@@ -23,8 +23,8 @@
    justify-content: center;
    flex-wrap: wrap;
    align-content: flex-start;
-   border: 15px solid rgb(120, 120, 120);
-   background-color: #FFEEE4;
+   border: 15px solid #444f59;
+   background-color: #e3dede;
    border-radius: 40px;
    margin:10px;
 
@@ -34,7 +34,7 @@
       width: 100%;
       height: 50px;
       text-align: center;
-      border-bottom: 3px solid rgb(120, 120, 120);
+      border-bottom: 3px solid #444f59;
 
       input[type=text]{
         margin-top: 3px;
@@ -59,12 +59,12 @@
       margin:  20px auto 10px auto;
       padding: 5px;
       height: 40px;
-      border: 5px solid rgb(120, 120, 120);
+      border: 5px solid #444f59;
       background-color: white;
       border-radius: 5px;
       outline: none;
       font-size: 20px;
-      color: grey;
+      color: #444f59;
 
 
 
@@ -105,8 +105,8 @@
 
 .boxList {
    width: 30%;
-   border: 15px solid rgb(120, 120, 120);
-   background-color: #FFEEE4;
+   border: 15px solid #444f59;
+   background-color: #e3dede;
    border-radius: 40px;
    margin:10px;
 
@@ -137,14 +137,14 @@
          #save {
             width: 130px;
             height: 25px;
-            background-color: rgb(195, 191, 196);
+            background-color: #444f59;
             border-radius: 5px;
             outline: none;
             font-weight: bold;
             color: white;
             transition: 0.8s;
             &:hover {
-                background-color: rgb(120, 120, 120);
+                background-color: #667f89;
             }
          }
       }
@@ -160,12 +160,12 @@
          margin: 0 auto;
          padding: 5px;
          height: 40px;
-         border: 5px solid rgb(195, 191, 196);
+         border: 5px solid #444f59;
          background-color: white;
          border-radius: 5px;
          outline: none;
          font-size: 20px;
-         color: grey;
+         color: #444f59;
 
       }
 

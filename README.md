@@ -1,7 +1,5 @@
 # TaskList
 
-# TaskList
-
 
 Task List using local storage
 
@@ -10,8 +8,3 @@ Simply Task List using local storage
 
 
 You can add and remove item to list you make.
-
-
-
-You can add and remove item to list you make.
-

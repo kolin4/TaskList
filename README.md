@@ -1,6 +1,6 @@
 # TaskList
 
-Simply Task List using local storage
+Task List using local storage
 
+You can add and remove item to list you make.
 
-without styles yet

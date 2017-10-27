@@ -75,7 +75,7 @@
    }
    .lista {
        margin-top: 60px;
-        width: 40%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -224,12 +224,13 @@
    }
 
 }
-@media screen and (max-width:760px){
+@media screen and (max-width:640px){
     .box {
         display: flex;
         justify-content: center;
         width: 100%;
         height: auto;
+        min-height: 100vh;
         align-content: flex-start;
         background-color: #D499B9;
         flex-wrap: wrap;
@@ -237,7 +238,7 @@
 
     .boxTask {
        width: 100%;
-       min-height: 45vh;
+       min-height: 50vh;
        display: flex;
        justify-content: center;
        flex-wrap: wrap;
@@ -326,7 +327,7 @@
 
     .boxList {
        width: 100%;
-       min-height: 45vh;
+       min-height: 50vh;
        border: 5px solid #444f59;
        background-color: #e3dede;
        border-radius: 40px;
@@ -381,7 +382,7 @@
           text-align: center;
           margin-top: 10px;
           .text {
-              margin:  20px auto 10px auto;
+
               height: 40px;
               border: 5px solid #444f59;
               background-color: white;
@@ -445,212 +446,212 @@
 
     }
 }
-// @media screen and (min-width:401px) and (max-width:1000px){
-//
-//     .boxTask {
-//        width: 70%;
-//        display: flex;
-//        justify-content: center;
-//        flex-wrap: wrap;
-//        align-content: flex-start;
-//        border: 10px solid #444f59;
-//        background-color: #e3dede;
-//        border-radius: 40px;
-//        margin:10px;
-//
-//
-//
-//        .form{
-//           width: 100%;
-//           height: 50px;
-//           text-align: center;
-//           border-bottom: 3px solid #444f59;
-//
-//           input[type=text]{
-//             margin-top: 3px;
-//             width: 45%;
-//             height: 40px;
-//             border: 5px solid rgb(195, 191, 196);
-//             background-color: white;
-//             border-radius: 5px;
-//             outline: none;
-//             font-size: 30px;
-//             color: grey;
-//             cursor:text;
-//             text-align: center;
-//             transition: 0.5s;
-//             &:focus{
-//                 border: 5px solid red;
-//             }
-//          }
-//        }
-//        .text {
-//           width: 40%;
-//           margin:  20px auto 10px auto;
-//
-//           height: 40px;
-//           border: 5px solid #444f59;
-//           background-color: white;
-//           border-radius: 5px;
-//           outline: none;
-//           font-size: 20px;
-//           color: #444f59;
-//           display: flex;
-//           justify-content: center;
-//           align-items: center;
-//
-//
-//
-//        }
-//        .lista {
-//            margin-top: 60px;
-//             width: 40%;
-//             display: flex;
-//             justify-content: center;
-//             align-items: flex-start;
-//             align-content: flex-start;
-//             flex-wrap: wrap;
-//
-//
-//              li {
-//               width: 80%;
-//               text-align: left;
-//               height: 40px;
-//               border: 5px solid rgb(195, 191, 196);
-//               background-color: white;
-//               border-radius: 5px;
-//               outline: none;
-//               font-size: 25px;
-//               color: grey;
-//               list-style-type: none;
-//               transition: 0.3s;
-//
-//               &:hover{
-//                  border: 5px solid rgb(120, 120, 120);
-//                  transform:scale(1.05);
-//               }
-//           }
-//        }
-//     }
-//
-//     /////////////////////////////////
-//
-//
-//     .boxList {
-//        width: 30%;
-//        border: 10px solid #444f59;
-//        background-color: #e3dede;
-//        border-radius: 40px;
-//        margin:10px;
-//
-//        .manageComp{
-//           width: 100%;
-//           border-bottom: 3px solid rgb(120, 120, 120);
-//
-//           .listSaveComp{
-//              width: 80%;
-//              margin: 10px auto;
-//              display: flex;
-//
-//              #listName {
-//                 width: 50%;
-//                 height: 25px;
-//                 border: 3px solid rgb(195, 191, 196);
-//                 background-color: white;
-//                 border-radius: 5px;
-//                 outline: none;
-//                 font-size: 15px;
-//                 color: black;
-//                 transition: 0.8s;
-//
-//                 cursor:text;
-//                 &:focus{
-//
-//                     border: 3px solid rgb(120, 120, 120);
-//                 }
-//              }
-//              #save {
-//                 width: 50%;
-//                 height: 25px;
-//                 background-color: #444f59;
-//                 border-radius: 5px;
-//                 outline: none;
-//                 font-weight: bold;
-//                 color: white;
-//                 transition: 0.8s;
-//                 &:hover {
-//                     background-color: #667f89;
-//                 }
-//              }
-//           }
-//        }
-//
-//        .listResult{
-//           width: 100%;
-//           height: 100px;
-//           text-align: center;
-//           margin-top: 10px;
-//           .text {
-//              width: 80%;
-//              margin: 0 auto;
-//              padding: 5px;
-//              height: 40px;
-//              border: 5px solid #444f59;
-//              background-color: white;
-//              border-radius: 5px;
-//              outline: none;
-//              font-size: 20px;
-//              color: #444f59;
-//
-//           }
-//
-//           #result{
-//              list-style-type: none;
-//              width: 100%;
-//              margin-top: 5px;
-//              .yourList {
-//                 width: 65%;
-//                 margin: 0 auto;
-//                 height: 30px;
-//                 border: 5px solid rgb(195, 191, 196);
-//                 background-color: white;
-//                 border-radius: 5px;
-//                 outline: none;
-//                 font-size: 20px;
-//                 color: grey;
-//                 margin-top: 2px;
-//                 transition: 0.4s;
-//                 display: flex;
-//                 justify-content: space-between;
-//                 align-items: center;
-//
-//                 &:hover{
-//                     width: 75%;
-//                 }
-//              }
-//              .active {
-//                 width: 75%;
-//                 border: 5px solid rgb(120, 120, 120);
-//                 color: black;
-//
-//              }
-//              .delList {
-//                  background-color: red;
-//                  width: 20px;
-//                  height: 20px;
-//                  color: white;
-//                  border: none;
-//                  display: flex;
-//                  justify-content: center;
-//                  align-items: center;
-//                  transition: 1s;
-//                  &:hover{
-//                      transform: rotate(180deg);
-//                  }
-//              }
-//           }
-//
-//        }
-//
-//     }
-// }
+@media screen and (min-width:641px) and (max-width:959px){
+
+    .boxTask {
+       width: 70%;
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+       align-content: flex-start;
+       border: 8px solid #444f59;
+       background-color: #e3dede;
+       border-radius: 40px;
+       margin:10px;
+
+
+
+       .form{
+          width: 100%;
+          height: 50px;
+          text-align: center;
+          border-bottom: 3px solid #444f59;
+
+          input[type=text]{
+            margin-top: 3px;
+            width: 80%;
+            height: 40px;
+            border: 5px solid rgb(195, 191, 196);
+            background-color: white;
+            border-radius: 5px;
+            outline: none;
+            font-size: 20px;
+            color: grey;
+            cursor:text;
+            text-align: center;
+            transition: 0.5s;
+            &:focus{
+                border: 5px solid red;
+            }
+         }
+       }
+       .text {
+          width: 60%;
+          margin:  20px auto 10px auto;
+
+          height: 40px;
+          border: 5px solid #444f59;
+          background-color: white;
+          border-radius: 5px;
+          outline: none;
+          font-size: 20px;
+          color: #444f59;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+
+
+       }
+       .lista {
+           margin-top: 60px;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: flex-start;
+            flex-wrap: wrap;
+
+
+             li {
+              width: 100%;
+              text-align: left;
+              height: 40px;
+              border: 5px solid rgb(195, 191, 196);
+              background-color: white;
+              border-radius: 5px;
+              outline: none;
+              font-size: 25px;
+              color: grey;
+              list-style-type: none;
+              transition: 0.3s;
+
+              &:hover{
+                 border: 5px solid rgb(120, 120, 120);
+                 transform:scale(1.05);
+              }
+          }
+       }
+    }
+
+    /////////////////////////////////
+
+
+    .boxList {
+       width: 30%;
+       border: 8px solid #444f59;
+       background-color: #e3dede;
+       border-radius: 40px;
+       margin:10px;
+
+       .manageComp{
+          width: 100%;
+          border-bottom: 3px solid rgb(120, 120, 120);
+
+          .listSaveComp{
+             width: 80%;
+             margin: 10px auto;
+             display: flex;
+
+             #listName {
+                width: 50%;
+                height: 25px;
+                border: 3px solid rgb(195, 191, 196);
+                background-color: white;
+                border-radius: 5px;
+                outline: none;
+                font-size: 15px;
+                color: black;
+                transition: 0.8s;
+
+                cursor:text;
+                &:focus{
+
+                    border: 3px solid rgb(120, 120, 120);
+                }
+             }
+             #save {
+                width: 50%;
+                height: 25px;
+                background-color: #444f59;
+                border-radius: 5px;
+                outline: none;
+                font-weight: bold;
+                color: white;
+                transition: 0.8s;
+                &:hover {
+                    background-color: #667f89;
+                }
+             }
+          }
+       }
+
+       .listResult{
+          width: 100%;
+          height: 100px;
+          text-align: center;
+          margin-top: 10px;
+          .text {
+             width: 80%;
+             margin: 0 auto;
+             padding: 5px;
+             height: 40px;
+             border: 5px solid #444f59;
+             background-color: white;
+             border-radius: 5px;
+             outline: none;
+             font-size: 20px;
+             color: #444f59;
+
+          }
+
+          #result{
+             list-style-type: none;
+             width: 100%;
+             margin-top: 5px;
+             .yourList {
+                width: 65%;
+                margin: 0 auto;
+                height: 30px;
+                border: 5px solid rgb(195, 191, 196);
+                background-color: white;
+                border-radius: 5px;
+                outline: none;
+                font-size: 20px;
+                color: grey;
+                margin-top: 2px;
+                transition: 0.4s;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &:hover{
+                    width: 75%;
+                }
+             }
+             .active {
+                width: 75%;
+                border: 5px solid rgb(120, 120, 120);
+                color: black;
+
+             }
+             .delList {
+                 background-color: red;
+                 width: 20px;
+                 height: 20px;
+                 color: white;
+                 border: none;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 transition: 1s;
+                 &:hover{
+                     transform: rotate(180deg);
+                 }
+             }
+          }
+
+       }
+
+    }
+}

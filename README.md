@@ -1,7 +1,5 @@
 # TaskList
 
-# TaskList
-
 
 Task List using local storage
 

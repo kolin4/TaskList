@@ -12,7 +12,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     align-content: flex-start;
     background-color: #D499B9;
 }
@@ -38,7 +39,7 @@
 
       input[type=text]{
         margin-top: 3px;
-        width: 300px;
+        width: 45%;
         height: 40px;
         border: 5px solid rgb(195, 191, 196);
         background-color: white;
@@ -57,7 +58,7 @@
    .text {
       width: 40%;
       margin:  20px auto 10px auto;
-      padding: 5px;
+
       height: 40px;
       border: 5px solid #444f59;
       background-color: white;
@@ -65,13 +66,16 @@
       outline: none;
       font-size: 20px;
       color: #444f59;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
 
 
    }
    .lista {
        margin-top: 60px;
-        width: 300px;
+        width: 40%;
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -80,7 +84,7 @@
 
 
          li {
-          width: 300px;
+          width: 80%;
           text-align: left;
           height: 40px;
           border: 5px solid rgb(195, 191, 196);
@@ -117,6 +121,7 @@
       .listSaveComp{
          width: 80%;
          margin: 10px auto;
+         display: flex;
 
          #listName {
             width: 50%;
@@ -128,6 +133,7 @@
             font-size: 15px;
             color: black;
             transition: 0.8s;
+
             cursor:text;
             &:focus{
 
@@ -135,7 +141,7 @@
             }
          }
          #save {
-            width: 130px;
+            width: 50%;
             height: 25px;
             background-color: #444f59;
             border-radius: 5px;

@@ -224,12 +224,13 @@
    }
 
 }
-@media screen and (max-width:760px){
+@media screen and (max-width:640px){
     .box {
         display: flex;
         justify-content: center;
         width: 100%;
         height: auto;
+        min-height: 100vh;
         align-content: flex-start;
         background-color: #D499B9;
         flex-wrap: wrap;
@@ -237,7 +238,7 @@
 
     .boxTask {
        width: 100%;
-       min-height: 45vh;
+       min-height: 50vh;
        display: flex;
        justify-content: center;
        flex-wrap: wrap;
@@ -326,7 +327,7 @@
 
     .boxList {
        width: 100%;
-       min-height: 45vh;
+       min-height: 50vh;
        border: 5px solid #444f59;
        background-color: #e3dede;
        border-radius: 40px;
